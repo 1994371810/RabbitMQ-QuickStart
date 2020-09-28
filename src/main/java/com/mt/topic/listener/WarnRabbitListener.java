@@ -25,6 +25,8 @@ public class WarnRabbitListener {
         System.out.println("消息体===>"+result);
         System.out.println("请求头==>"+header);
         System.out.println("消息==>"+message+"\n");
+        throw new RuntimeException("error");
     }
+
 
 }
