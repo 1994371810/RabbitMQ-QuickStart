@@ -1,4 +1,4 @@
-package com.mt.topic.listener;
+package com.mt.demo.topic.listener;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
@@ -16,12 +16,12 @@ import java.util.Map;
  * @author 郭俊旺
  */
 @Component
-@RabbitListener(queues = "*.info")
-public class InfoRabbitListener {
+@RabbitListener(queues = "message.*")
+public class MessageRabbitListener {
 
     @RabbitHandler
     public void consumer(String result, Message message, Channel channel, @Headers Map<String,Object> header){
-        System.out.println("*.info 接受到消息");
+        System.out.println("message.* 接受到消息");
         System.out.println("消息体===>"+result);
         System.out.println("请求头==>"+header);
         System.out.println("消息==>"+message+"\n");

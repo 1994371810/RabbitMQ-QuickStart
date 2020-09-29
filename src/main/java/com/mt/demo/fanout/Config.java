@@ -1,4 +1,4 @@
-package com.mt.fanout;
+package com.mt.demo.fanout;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

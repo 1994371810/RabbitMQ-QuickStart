@@ -1,6 +1,5 @@
-package com.mt.fanout;
+package com.mt.demo.fanout;
 
-import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

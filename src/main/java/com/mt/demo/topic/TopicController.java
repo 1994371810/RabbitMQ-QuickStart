@@ -1,4 +1,4 @@
-package com.mt.topic;
+package com.mt.demo.topic;
 
 import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;

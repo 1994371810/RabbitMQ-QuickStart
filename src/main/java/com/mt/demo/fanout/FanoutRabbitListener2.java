@@ -1,4 +1,4 @@
-package com.mt.fanout;
+package com.mt.demo.fanout;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;

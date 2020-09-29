@@ -1,4 +1,4 @@
-package com.mt.topic.listener;
+package com.mt.demo.direct;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
@@ -9,19 +9,18 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-
 /**
- * Created by 郭俊旺 on 2020/9/27 18:56
- *
+ * Created by 郭俊旺 on 2020/9/27 17:11
+ * 监听 direct_queue2
  * @author 郭俊旺
  */
 @Component
-@RabbitListener(queues = "log.*")
-public class LogRabbitListener {
+@RabbitListener(queues = "direct_queue2")
+public class DirectRabbitListener2 {
 
     @RabbitHandler
-    public void consumer(String result, Message message, Channel channel, @Headers Map<String,Object> header){
-        System.out.println("log.* 接受到消息");
+    public void consumer(String result, Channel channel, @Headers Map<String,Object> header,Message message){
+        System.out.println("direct_queue2接受到消息");
         System.out.println("消息体===>"+result);
         System.out.println("请求头==>"+header);
         System.out.println("消息==>"+message+"\n");

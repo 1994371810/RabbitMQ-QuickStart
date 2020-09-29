@@ -1,4 +1,4 @@
-package com.mt.reliable;
+package com.mt.demo.reliable;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -95,7 +95,7 @@ public class SendReliableConfig {
 
         /**
          * correlationData 再发送消息时可以设置
-         * @link( com.mt.topic.TopicController.send)
+         * @link( com.mt.demo.topic.TopicController.send)
          * */
         rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
             @Override
